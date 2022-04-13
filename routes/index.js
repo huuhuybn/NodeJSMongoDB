@@ -16,7 +16,7 @@ var storage = multer.diskStorage({
 });
 var upload = multer({
     storage: storage,
-    limits: {fileSize: 1 * 1024}
+    limits: {fileSize: 1 * 1024 * 1024}
 });
 
 var db = 'mongodb+srv://huynguyen:f7JSywuXhUIHNzOS@cluster0.yzg91.mongodb.net/tinder?retryWrites=true&w=majority'
