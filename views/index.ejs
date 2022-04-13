@@ -30,6 +30,16 @@
 
 </form>
 
+<form action="/single" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" />
+    <button type="submit">Upload</button>
+</form>
+
+<form action="/multi" method="post" enctype="multipart/form-data">
+    <input type="file" name="avatar" multiple />
+    <button type="submit">Upload</button>
+</form>
+
 <% if (typeof message != 'undefined')  { %>
 
     <h1><%= message %></h1>
