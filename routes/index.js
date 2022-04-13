@@ -54,6 +54,25 @@ router.post('/single', function (req, res) {
 
 })
 
+router.post('/singleapi', function (req, res) {
+
+    uploadSingle(req, res, function (error) {
+        if (error) {
+            console.log('Co loi xay ra' + error.message);
+            res.send({
+                code : 200,
+                message : error.message
+            })
+        } else {
+            res.send({
+                code : 200,
+                message : 'Thanh Cong'
+            })
+        }
+    })
+
+})
+
 router.post('/multi', upload.array('avatar', 2), function (req, res) {
 
     res.redirect('/')
